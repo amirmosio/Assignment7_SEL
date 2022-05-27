@@ -31,8 +31,8 @@ public class SquareTest {
     @Test
     public void testCalculateAreaAfterSizeChange() {
         Square square = new Square(5);
-        rectangle.setSize(7);
-        double area = rectangle.calculateArea();
+        square.setSize(7);
+        double area = square.calculateArea();
         assertEquals(area, 7 * 7, 0.00001);
     }
 }

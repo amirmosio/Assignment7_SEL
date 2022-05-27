@@ -1,7 +1,8 @@
-package shape_management;
+package shape_management.shapes;
 
-import org.junit.Assert;
 import org.junit.Test;
+import shape_management.shapes.Rectangle;
+import shape_management.exceptions.InvalidSizeForCalculateAreaException;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
@@ -11,7 +12,7 @@ public class RectangleTest {
     public void testCalculateAreaWithValidSize() {
         Rectangle rectangle = new Rectangle(5, 6);
         double area = rectangle.calculateArea();
-        assertEquals(area, 5 * 6);
+        assertEquals(area, 5 * 6, 0.00001);
     }
 
     @Test

@@ -1,4 +1,4 @@
-package shape_management;
+package shape_management.shapes;
 
 import org.junit.Test;
 

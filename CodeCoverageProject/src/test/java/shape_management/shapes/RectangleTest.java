@@ -51,4 +51,13 @@ public class RectangleTest {
         assertTrue(exception);
     }
 
+    @Test
+    public void testCalculateAreaAfterWidthHeightChange() {
+        Rectangle rectangle = new Rectangle(5, 6);
+        rectangle.setWidth(7);
+        rectangle.setHeight(8);
+        double area = rectangle.calculateArea();
+        assertEquals(area, 8 * 7, 0.00001);
+    }
+
 }

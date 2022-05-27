@@ -1,12 +1,21 @@
 package shape_management.shapes;
+
 import shape_management.exceptions.InvalidSizeForCalculateAreaException;
 
 public class Rectangle {
-    final private double width;
-    final private double height;
+    private double width;
+    private double height;
 
     public Rectangle(double width, double height) {
         this.width = width;
+        this.height = height;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
         this.height = height;
     }
 

@@ -1,8 +1,8 @@
 package shape_management.shapes;
-
+import shape_management.interfaces.AreaCalculable;
 import shape_management.exceptions.InvalidSizeForCalculateAreaException;
 
-public class Rectangle {
+public class Rectangle implements AreaCalculable {
     private double width;
     private double height;
 

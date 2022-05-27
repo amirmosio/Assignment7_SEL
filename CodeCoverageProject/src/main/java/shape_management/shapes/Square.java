@@ -2,21 +2,21 @@ package shape_management.shapes;
 
 import shape_management.exceptions.InvalidSizeForCalculateAreaException;
 
-public class Square {
-    private double size;
+public class Square extends Rectangle {
 
     public Square(double size) {
-        this.size = size;
+        super(size, size);
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    @Override
+    public void setWidth(double width) {
+        super.setWidth(width);
+        super.setHeight(width);
     }
 
-    public double calculateArea() {
-        if (this.size >= 0) {
-            return this.size * this.size;
-        }
-        throw new InvalidSizeForCalculateAreaException(this.size, this.size);
+    @Override
+    public void setHeight(double height) {
+        super.setWidth(height);
+        super.setHeight(height);
     }
 }

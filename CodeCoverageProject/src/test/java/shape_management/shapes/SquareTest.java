@@ -29,9 +29,17 @@ public class SquareTest {
     }
 
     @Test
-    public void testCalculateAreaAfterSizeChange() {
+    public void testCalculateAreaAfterWidthSizeChange() {
         Square square = new Square(5);
-        square.setSize(7);
+        square.setWidth(7);
+        double area = square.calculateArea();
+        assertEquals(area, 7 * 7, 0.00001);
+    }
+
+    @Test
+    public void testCalculateAreaAfterHeightSizeChange() {
+        Square square = new Square(5);
+        square.setHeight(7);
         double area = square.calculateArea();
         assertEquals(area, 7 * 7, 0.00001);
     }
